@@ -1,0 +1,133 @@
+html{
+    font-size:16px;
+    color:white;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT';
+}
+
+@keyframes slide-down{
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes slide-left{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateY(0%);
+    }
+}
+
+@keyframes slide-right{
+    0%{
+        transform:translateX(-100%);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+}
+
+body{
+    background-color: cornsilk;
+    display:grid;
+    grid-template-rows: auto auto;
+    grid-row-gap:0.5rem;
+    width:100vw;
+    height:100vh;
+}
+
+#header{
+    width:50vw;
+    height:25vw;
+    margin:0 auto;
+    display:grid;
+    grid-template-rows:repeat(2,auto);
+    animation:slide-down 3s;
+}
+#header #img-1{
+    height:100%;
+    width:100%;
+    border-radius:0.25rem;
+}
+#advert{
+    background-color:goldenrod;
+    height:auto;
+    width:20rem;
+    margin:0 auto;
+    border-radius:0.75rem;
+    animation:slide-right 3s;
+
+}
+
+#container{
+    display:grid;
+    grid-template-rows: repeat(3, 10rem);
+    grid-row-gap: 0.5rem;
+    width:100vw;
+}
+
+#div-1{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    'image paragraph';
+    background-color: rgba(0, 128, 0, 0.75);
+    border-radius: 0.25rem;
+    width:100vw;
+    animation:slide-left 4s;
+}
+#div-1 img{
+    grid-area:image;
+    height:10rem;
+    width:100%;
+    border-radius:0.25rem;
+}
+#div-1 p{
+    grid-area:paragraph;
+    margin:0.25rem;
+}
+
+#div-2{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    'paragraph-2 image-2';
+    background-color: rgba(0, 128, 0, 0.75);
+    border-radius: 0.25rem;
+    width:100vw;
+    margin:0.25rem;
+    animation:slide-right 5s;
+}
+#div-2 img{
+    grid-area:image-2;
+    height:9.5rem;
+    width:100%;
+    border-radius:0.25rem;
+}
+#div-2 p{
+    grid-area:paragraph-2;
+}
+
+#div-3{
+    background-color: rgba(0, 128, 0, 0.75);
+    display:grid;
+    grid-template-areas:
+    'image text';
+    border-radius:0.25rem;
+    animation:slide-left 6s;
+}
+#image{
+    grid-area:image;
+    width:auto;
+    height:10rem;
+    border-radius:0.25rem;;
+}
+#text{
+    grid-area: text;
+    font-size:1.25rem;
+}
