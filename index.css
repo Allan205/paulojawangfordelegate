@@ -36,6 +36,7 @@ body{
     background-color: cornsilk;
     display:grid;
     grid-template-rows: auto auto;
+    align-items: center;
     grid-row-gap:0.5rem;
     width:100vw;
     height:100vh;
@@ -47,6 +48,7 @@ body{
     margin:0 auto;
     display:grid;
     grid-template-rows:repeat(2,auto);
+    align-items: center;
     animation:slide-down 3s;
 }
 #header #img-1{
@@ -67,6 +69,7 @@ body{
 #container{
     display:grid;
     grid-template-rows: repeat(3, 10rem);
+    align-items: center;
     grid-row-gap: 0.5rem;
     width:100vw;
 }
@@ -76,6 +79,7 @@ body{
     grid-template-columns: auto auto;
     grid-template-areas:
     'image paragraph';
+    justify-content: center;
     background-color: rgba(0, 128, 0, 0.75);
     border-radius: 0.25rem;
     width:100vw;
@@ -97,6 +101,7 @@ body{
     grid-template-columns: auto auto;
     grid-template-areas:
     'paragraph-2 image-2';
+    justify-content: center;
     background-color: rgba(0, 128, 0, 0.75);
     border-radius: 0.25rem;
     width:100vw;
